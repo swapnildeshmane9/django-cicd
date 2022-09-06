@@ -7,10 +7,10 @@ else
     python3 -m venv env
 fi
 
-source env/bin/activate
+source /var/lib/jenkins/workspace/Django-cicd/env/bin/activate
 
 
-pip3 install -r requirements.txt
+pip3 install -r /var/lib/jenkins/workspace/Django-cicd/requirements.txt
 
 if [ -d "logs" ] 
 then
