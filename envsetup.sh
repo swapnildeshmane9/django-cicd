@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt-get -y install python3-pip
-
 if [ -d "env" ] 
 then
     echo "Python virtual environment exists." 
@@ -9,10 +7,10 @@ else
     python3 -m venv env
 fi
 
-source /var/lib/jenkins/workspace/Django-cicd/env/bin/activate
+source env/bin/activate
 
 
-pip3 install -r /var/lib/jenkins/workspace/Django-cicd/requirements.txt
+pip3 install -r requirements.txt
 
 if [ -d "logs" ] 
 then
